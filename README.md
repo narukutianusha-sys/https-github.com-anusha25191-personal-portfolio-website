@@ -1,291 +1,210 @@
-# Personal Portfolio Website
-
-## Student Information
-
-**Name:** Narukuti Anusha
-
-**Course:** B.Tech - Computer Science Engineering
-
-**College:** Vaagdevi College of Engineering
-
-**Year of Study:** Final Year
-
-**Email:** [narukutianusha@gmail.com](mailto:narukutianusha@gmail.com)
-
----
+# Styled Portfolio Website - Week 2 CSS Project
 
 ## Project Overview
 
-The Personal Portfolio Website is a web-based application developed using HTML5 to showcase my personal information, educational background, technical skills, project experience, and contact details. The website serves as a digital portfolio that highlights my academic achievements and technical capabilities as a Computer Science Engineering student.
+The Styled Portfolio Website is a personal portfolio developed using HTML5 and CSS3. The project showcases personal information, technical skills, project details, and contact information. The main objective of this project is to learn CSS styling, responsive web design, and modern webpage layouts.
 
----
+## Project Goals and Objectives
 
-## Project Objectives
-
-* Develop a personal portfolio website using HTML5.
-* Understand the structure of web pages.
-* Implement semantic HTML elements.
-* Create internal navigation links.
-* Display personal and professional information.
-* Build a contact form with validation.
-* Improve front-end web development skills.
-
----
+* Create a professional personal portfolio website.
+* Apply CSS styling to improve visual appearance.
+* Implement responsive design for mobile devices.
+* Use Flexbox for layout management.
+* Add hover effects and interactive elements.
+* Learn external CSS implementation.
 
 ## Technologies Used
 
 * HTML5
 * CSS3
-* Visual Studio Code
-* Google Chrome Browser
-
----
-
-## HTML Concepts Learned
-
-### HTML Structure
-
-The project uses the standard HTML5 document structure:
-
-* DOCTYPE Declaration
-* HTML Tag
-* Head Section
-* Body Section
-
-### HTML Elements
-
-The following HTML elements were implemented:
-
-* Headings (h1, h2)
-* Paragraphs (p)
-* Images (img)
-* Hyperlinks (a)
-* Lists (ul, li)
-* Forms (form, input, textarea, button)
-
-### Semantic HTML
-
-The project uses semantic tags including:
-
-* header
-* nav
-* main
-* section
-* footer
-
-### Forms and Validation
-
-The contact form includes:
-
-* Name Field
-* Email Field
-* Message Field
-
-Validation is implemented using the required and email attributes.
-
----
-
-## Website Sections
-
-### Home/Header Section
-
-Contains:
-
-* Website Title
-* Navigation Menu
-
-### About Me Section
-
-Displays personal information about:
-
-* Academic Background
-* Career Interests
-* Educational Information
-
-### Skills Section
-
-Technical skills included:
-
-* HTML
-* CSS
-* Java
-* Python
-* DBMS
-* C Programming
-
-### Projects Section
-
-#### Offender Pathway Monitoring via Electronic Message Tracing Platform
-
-Description:
-
-This project focuses on monitoring offender activities through electronic message tracing techniques. The system helps analyze communication patterns and supports tracking activities through digital communication platforms. The project demonstrates concepts related to cybersecurity, monitoring systems, and data analysis.
-
-### Contact Section
-
-Provides a contact form for visitors to send messages.
-
----
-
-## Project Structure
-
-Portfolio-Website/
-
-├── index.html
-
-├── README.md
-
-├── images/
-
-│ └── profile.jpg
-
-└── requirements.txt (Optional)
-
----
+* Google Fonts (Poppins)
 
 ## Setup Instructions
 
 ### Step 1
 
-Install Visual Studio Code.
+Create a project folder named:
+
+Portfolio-Website
 
 ### Step 2
 
-Create a project folder named Portfolio-Website.
+Create the following files:
+
+* index.html
+* style.css
+* README.md
 
 ### Step 3
 
-Create index.html and README.md files.
+Create folders:
+
+* images
+* screenshots
 
 ### Step 4
 
-Create an images folder and add profile.jpg.
+Add profile image inside the images folder.
 
 ### Step 5
 
-Paste the HTML source code into index.html.
+Link CSS file to HTML:
+
+<link rel="stylesheet" href="style.css">
 
 ### Step 6
 
-Save all files.
+Run the project using Live Server.
 
-### Step 7
+## CSS Concepts Used
 
-Open index.html in a web browser.
+### CSS Selectors
 
-### Step 8
+* Element Selector
+* Class Selector
+* ID Selector
+* Pseudo-class Selector (:hover)
 
-Verify all sections and navigation links are functioning correctly.
+### CSS Properties
 
----
+* color
+* background-color
+* font-family
+* margin
+* padding
+* border-radius
+* box-shadow
+* width
+* height
+
+### Box Model
+
+The project uses:
+
+* Content
+* Padding
+* Border
+* Margin
+
+### CSS Variables
+
+:root{
+--primary:#3498db;
+--secondary:#2c3e50;
+--accent:#e74c3c;
+}
+
+### Flexbox Layout
+
+Used in the Skills section to arrange skills in a responsive layout.
+
+### Responsive Design
+
+Media queries were implemented to make the website mobile-friendly.
+
+@media(max-width:768px)
+
+### Hover Effects
+
+Implemented on:
+
+* Navigation links
+* Skill cards
+* Buttons
+* Profile image
+
+## Design Decisions
+
+### Color Scheme
+
+* Blue (#3498db) for primary elements
+* Dark Blue (#2c3e50) for header and footer
+* Red (#e74c3c) for hover effects
+
+### Typography
+
+Google Font "Poppins" was used for a modern appearance.
+
+### Layout Structure
+
+* Header
+* Navigation Menu
+* About Section
+* Skills Section
+* Project Section
+* Contact Form
+* Footer
+
+## Code Structure
+
+Portfolio-Website/
+│
+├── index.html
+├── style.css
+├── README.md
+│
+├── images/
+│   └── anusha.jpg
+│
+└── screenshots/
+├── homepage.png
+├── about.png
+├── skills.png
+├── project.png
+├── contact.png
+└── mobile-view.png
 
 ## Technical Details
 
 ### Architecture
 
-The website follows a Single Page Application structure where all information is organized into separate sections within one page.
+The website follows a simple front-end architecture:
 
-### Navigation
+* HTML for structure
+* CSS for styling
+* Responsive design using media queries
 
-Internal navigation links allow users to move between:
+### Data Structures
 
-* About
-* Skills
-* Projects
-* Contact
+No complex data structures are used because this is a static website project.
 
-### Data Organization
+### Algorithms
 
-Information is organized using semantic HTML elements to improve readability and maintainability.
-
----
+No algorithms are implemented. The project focuses on webpage design and styling.
 
 ## Testing Evidence
 
 ### Test Case 1
 
-Test Scenario:
-
-Leave Name field empty.
-
-Expected Result:
-
-Browser should display validation message.
-
-Result:
-
-Passed
+Verify navigation links work correctly.
+Result: Passed
 
 ### Test Case 2
 
-Test Scenario:
-
-Enter invalid email format.
-
-Expected Result:
-
-Browser should request a valid email address.
-
-Result:
-
-Passed
+Verify hover effects appear on buttons and links.
+Result: Passed
 
 ### Test Case 3
 
-Test Scenario:
-
-Click navigation links.
-
-Expected Result:
-
-Page should move to the selected section.
-
-Result:
-
-Passed
+Verify website displays correctly on mobile screens.
+Result: Passed
 
 ### Test Case 4
 
-Test Scenario:
+Verify contact form accepts user input.
+Result: Passed
 
-Load profile image.
+## Screenshots
 
-Expected Result:
+Screenshots are included in the screenshots folder:
 
-Image should display successfully.
-
-Result:
-
-Passed
-
----
-
-## Visual Documentation
-
-Screenshots Included:
-
-1. Home Page
-2. About Section
-3. Skills Section
-4. Projects Section
-5. Contact Form
-6. Form Validation Message
-
----
-
-## Learning Outcomes
-
-Through this project, I gained knowledge in:
-
-* HTML5 Website Development
-* Semantic HTML Elements
-* Navigation Systems
-* Forms and Validation
-* Portfolio Website Design
-* Front-End Development Fundamentals
-
----
+* Homepage
+* About Section
+* Skills Section
+* Project Section
+* Contact Section
+* Mobile View
 
 ## Conclusion
 
-The Personal Portfolio Website successfully demonstrates the implementation of HTML5 concepts and front-end web development principles. The project provides a professional platform for presenting personal information, technical skills, academic projects, and contact details. This project enhanced my understanding of website structure, user interaction, and modern web development practices.
+This project helped me understand CSS styling, Flexbox layouts, responsive design, media queries, hover effects, and modern web development practices. The website is responsive, user-friendly, and visually appealing.
