@@ -1,178 +1,758 @@
-/* CSS Variables */
-:root{
-    --primary:#3498db;
-    --secondary:#2c3e50;
-    --accent:#e74c3c;
-}
+/* ===========================================
+   PROFESSIONAL INTERACTIVE PORTFOLIO WEBSITE
+   STYLE.CSS
+=========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 /* Reset */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 /* Body */
 body{
-    font-family:'Poppins', Arial, sans-serif;
-    background-color:#f4f4f4;
-    line-height:1.6;
-    max-width:1200px;
-    margin:auto;
+    background:#f4f8fc;
+    color:#333;
+    line-height:1.7;
 }
 
 /* Header */
 header{
-    background:var(--secondary);
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
     color:white;
     text-align:center;
     padding:25px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
+/* Title */
 header h1{
-    font-size:40px;
-    letter-spacing:2px;
+    font-size:42px;
+    margin-bottom:20px;
+    letter-spacing:1px;
 }
 
 /* Navigation */
-nav{
-    margin-top:10px;
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
 }
 
-nav a{
+nav ul li{
+    list-style:none;
+}
+
+nav ul li a{
     color:white;
     text-decoration:none;
-    margin:10px;
-    font-weight:bold;
+    font-size:18px;
+    font-weight:600;
     transition:0.3s;
 }
 
-nav a:hover{
-    color:yellow;
+nav ul li a:hover{
+    color:#ffeb3b;
 }
 
-/* Sections */
-section{
+/* Dark Mode Button */
+
+#darkModeBtn{
+    margin-top:20px;
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
     background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 5px rgba(0,0,0,0.2);
-    transition:0.3s;
+    color:#1565c0;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
 }
 
-section:hover{
-    transform:translateY(-5px);
+#darkModeBtn:hover{
+    background:#0d47a1;
+    color:white;
+    transform:scale(1.05);
 }
 
-/* About Section */
-#about{
+/* Section */
+
+section{
+
+    max-width:1100px;
+    margin:40px auto;
+    padding:80px 30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
     text-align:center;
+
 }
 
-/* Headings */
-h2{
-    color:#2c3e50;
-    margin-bottom:15px;
+/* Section Heading */
+
+section h2{
+
+    font-size:38px;
+
+    color:#1565c0;
+
+    margin-bottom:25px;
+
 }
 
-/* Project Title */
-#projects h3{
-    color:#3498db;
-    margin-bottom:10px;
+/* Welcome Heading */
+
+#welcome{
+
+    font-size:42px;
+
+    font-weight:700;
+
+    color:#0d47a1;
+
+}
+
+/* Home Paragraph */
+
+#home p{
+
+    font-size:19px;
+
+    max-width:800px;
+
+    margin:20px auto;
+
 }
 
 /* Profile Image */
-img{
-    width:220px;
-    height:220px;
+
+#home img{
+
+    width:250px;
+
+    height:250px;
+
     object-fit:cover;
+
     border-radius:50%;
-    display:block;
-    margin:15px auto;
-    transition:0.3s;
+
+    border:6px solid #42a5f5;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.4s;
+
 }
 
-img:hover{
-    transform:scale(1.05);
-}
+#home img:hover{
 
-/* Skills Container */
-.skills{
+    transform:scale(1.06);
+
+    box-shadow:0 0 25px rgba(33,150,243,.6);
+
+}/* ===========================================
+   SKILLS SECTION
+=========================================== */
+
+#skills ul{
+
+    list-style:none;
+
     display:flex;
-    flex-wrap:wrap;
-    gap:15px;
+
     justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:18px;
+
+    margin-top:25px;
+
 }
 
-/* Skill Boxes */
-.skill{
-    background:var(--primary);
+#skills li{
+
+    background:linear-gradient(135deg,#1976d2,#42a5f5);
+
     color:white;
-    padding:10px 15px;
-    border-radius:5px;
-    transition:0.3s;
-}
 
-.skill:hover{
-    background:var(--accent);
-    transform:scale(1.1);
-}
+    padding:14px 28px;
 
-/* Form Fields */
-input,
-textarea{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    margin-bottom:10px;
-    border:1px solid #ccc;
-    border-radius:5px;
-}
+    border-radius:30px;
 
-/* Button */
-button{
-    background:var(--primary);
-    color:white;
-    border:none;
-    padding:10px 15px;
+    font-size:17px;
+
+    font-weight:600;
+
     cursor:pointer;
-    border-radius:5px;
-    transition:0.3s;
+
+    transition:.3s;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+}
+
+#skills li:hover{
+
+    transform:translateY(-6px);
+
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+
+}
+
+/* ===========================================
+   PROJECT SECTION
+=========================================== */
+
+.project{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.project h3{
+
+    color:#1565c0;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+
+}
+
+.project p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.project:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+/* ===========================================
+   IMAGE GALLERY
+=========================================== */
+
+#sliderImage{
+
+    width:500px;
+
+    height:350px;
+
+    max-width:100%;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+#sliderImage:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================================
+   BUTTONS
+=========================================== */
+
+button{
+
+    padding:14px 28px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:linear-gradient(135deg,#1976d2,#42a5f5);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
 button:hover{
-    background:var(--accent);
+
+    background:linear-gradient(135deg,#0d47a1,#1565c0);
+
     transform:scale(1.05);
+
+}/* ===========================================
+   TO-DO LIST
+=========================================== */
+
+#todo input{
+
+    width:300px;
+
+    max-width:90%;
+
+    padding:14px;
+
+    border:2px solid #42a5f5;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
 }
 
-/* Footer */
-footer{
-    background:var(--secondary);
-    color:white;
-    text-align:center;
+#todo input:focus{
+
+    border-color:#1565c0;
+
+    box-shadow:0 0 8px rgba(21,101,192,.3);
+
+}
+
+#taskList{
+
+    list-style:none;
+
+    margin-top:25px;
+
+    padding:0;
+
+}
+
+#taskList li{
+
+    background:white;
+
+    width:420px;
+
+    max-width:95%;
+
+    margin:12px auto;
+
     padding:15px;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:17px;
+
+    transition:.3s;
+
 }
 
-/* Responsive Design */
-@media(max-width:768px){
+#taskList li:hover{
 
-    header h1{
-        font-size:30px;
-    }
+    transform:translateY(-3px);
 
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
 
-    img{
-        width:150px;
-        height:150px;
-    }
-
-    .skills{
-        flex-direction:column;
-        align-items:center;
-    }
 }
+
+#taskList button{
+
+    padding:8px 16px;
+
+    font-size:14px;
+
+    margin:0;
+
+}
+
+/* ===========================================
+   CONTACT FORM
+=========================================== */
+
+form{
+
+    max-width:650px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+label{
+
+    text-align:left;
+
+    margin-top:15px;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+
+    color:#1565c0;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:2px solid #90caf9;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus,
+textarea:focus{
+
+    border-color:#1565c0;
+
+    box-shadow:0 0 8px rgba(21,101,192,.3);
+
+}
+
+textarea{
+
+    height:150px;
+
+    resize:none;
+
+}
+
+#formMessage{
+
+    margin-top:15px;
+
+    font-weight:bold;
+
+    color:green;
+
+}
+
+/* ===========================================
+   FOOTER
+=========================================== */
+
+footer{
+
+    background:#0d47a1;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:50px;
+
+    font-size:17px;
+
+}/* ===========================================
+   DARK MODE
+=========================================== */
+
+.dark-mode{
+
+    background:#121212;
+
+    color:white;
+
+    transition:.4s;
+
+}
+
+.dark-mode header{
+
+    background:linear-gradient(135deg,#000428,#004e92);
+
+}
+
+.dark-mode section{
+
+    background:#1f1f1f;
+
+    color:white;
+
+    box-shadow:0 8px 20px rgba(255,255,255,.08);
+
+}
+
+.dark-mode h2{
+
+    color:#64b5f6;
+
+}
+
+.dark-mode .project{
+
+    background:#2b2b2b;
+
+    color:white;
+
+}
+
+.dark-mode .project h3{
+
+    color:#90caf9;
+
+}
+
+.dark-mode input,
+.dark-mode textarea{
+
+    background:#2b2b2b;
+
+    color:white;
+
+    border:2px solid #64b5f6;
+
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder{
+
+    color:#cccccc;
+
+}
+
+.dark-mode #taskList li{
+
+    background:#2b2b2b;
+
+    color:white;
+
+}
+
+.dark-mode button{
+
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+
+}
+
+.dark-mode footer{
+
+    background:#000;
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+section{
+
+    animation:fadeUp .9s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+button,
+.project,
+#skills li,
+#sliderImage,
+#home img{
+
+    transition:all .3s ease;
+
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+=========================================== */
+
+@media (max-width:768px){
+
+header{
+
+    padding:20px;
+
+}
+
+header h1{
+
+    font-size:30px;
+
+}
+
+nav ul{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+nav ul li{
+
+    margin:5px 0;
+
+}
+
+section{
+
+    padding:50px 20px;
+
+    margin:20px;
+
+}
+
+#welcome{
+
+    font-size:30px;
+
+}
+
+section h2{
+
+    font-size:28px;
+
+}
+
+#home img{
+
+    width:180px;
+
+    height:180px;
+
+}
+
+#sliderImage{
+    width:600px;
+    max-width:100%;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+#skills ul{
+
+    flex-direction:column;
+
+}
+
+#skills li{
+
+    width:100%;
+
+}
+
+.project{
+
+    padding:20px;
+
+}
+
+#taskList li{
+
+    width:100%;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+}
+
+button{
+
+    width:100%;
+
+    margin-top:10px;
+
+}
+
+footer{
+
+    font-size:15px;
+
+}
+
+}
+
+/* ===========================================
+   END OF STYLE.CSS
+=========================================== */

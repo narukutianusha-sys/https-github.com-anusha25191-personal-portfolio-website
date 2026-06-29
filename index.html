@@ -1,92 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Narukuti Anusha Portfolio</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Interactive Portfolio Website</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Narukuti Anusha</h1>
+    <!-- Header -->
+    <header>
+        <h1>Interactive Portfolio Website</h1>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Project</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#slider">Gallery</a></li>
+                <li><a href="#todo">To-Do</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-<main>
+        <button id="darkModeBtn">
+    🌙 Dark Mode
+</button>
 
+    </header>
+
+    <!-- Home -->
+    <section id="home">
+
+        <h2 id="welcome"></h2>
+
+        <img src="images/profile.jpg"
+             alt="Profile Photo"
+             width="200">
+
+        <h2>Hi, I'm Narukuti Anusha</h2>
+
+        <p>
+            Final Year B.Tech Computer Science Engineering Student.
+            Passionate about Web Development, Java, Python,
+            DBMS and Full Stack Development.
+        </p>
+
+    </section>
+
+    <!-- About -->
     <section id="about">
+
         <h2>About Me</h2>
 
-        <img src="images/anusha.jpg" alt="Narukuti Anusha Profile Photo">
-
         <p>
-            I am Narukuti Anusha, a Final Year B.Tech Computer Science Engineering student with a strong interest in Web Development, Java, Python, and Database Management Systems.
+            I am a dedicated Computer Science Engineering student
+            interested in developing modern websites and applications.
+            I enjoy learning new technologies and building real-world
+            projects.
         </p>
 
-        <p>
-            I enjoy building responsive websites and continuously learning new technologies to enhance my technical and problem-solving skills.
-        </p>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
+
         <h2>Skills</h2>
 
-        <div class="skills">
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">Java</div>
-            <div class="skill">Python</div>
-            <div class="skill">DBMS</div>
-            <div class="skill">C Programming</div>
-        </div>
+        <ul>
+
+            <li>HTML5</li>
+
+            <li>CSS3</li>
+
+            <li>JavaScript</li>
+
+            <li>Java</li>
+
+            <li>Python</li>
+
+            <li>DBMS</li>
+
+            <li>C Programming</li>
+
+        </ul>
+
     </section>
 
+    <!-- Projects -->
     <section id="projects">
-        <h2>Project</h2>
 
-        <h3>Offender Pathway Monitoring via Electronic Message Tracing Platform</h3>
+        <h2>Projects</h2>
 
-        <p>
-            This project focuses on monitoring offender activities through electronic message tracing techniques. The system helps track communication patterns and supports digital investigation and monitoring processes.
-        </p>
+        <div class="project">
+
+            <h3>Offender Pathway Monitoring System</h3>
+
+            <p>
+                A web-based system designed to monitor offender
+                pathways using database technologies.
+            </p>
+
+        </div>
+
     </section>
 
+    <!-- Image Slider -->
+    <section id="slider">
+
+        <h2>Image Gallery</h2>
+
+        <img id="sliderImage"
+     src="images/slider1.jpg"
+     alt="Slider Image">
+        <br><br>
+
+        <button onclick="previousImage()">
+            Previous
+        </button>
+
+        <button onclick="nextImage()">
+            Next
+        </button>
+
+    </section>
+
+    <!-- To Do -->
+    <section id="todo">
+
+        <h2>To-Do List</h2>
+
+        <input
+            type="text"
+            id="taskInput"
+            placeholder="Enter a task">
+
+        <button onclick="addTask()">
+            Add Task
+        </button>
+
+        <ul id="taskList">
+
+        </ul>
+
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
+
         <h2>Contact Me</h2>
 
-        <form>
-            <label>Name:</label>
-            <input type="text" required>
+        <form id="contactForm">
 
-            <label>Email:</label>
-            <input type="email" required>
+            <label>Name</label>
 
-            <label>Message:</label>
-            <textarea rows="5" required></textarea>
+            <input
+                type="text"
+                id="name">
 
-            <button type="submit">Send Message</button>
+            <label>Email</label>
+
+            <input
+                type="email"
+                id="email">
+
+            <label>Message</label>
+
+            <textarea
+                id="message">
+            </textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
         </form>
 
-        <p><strong>Email:</strong> narukutianusha@gmail.com</p>
+        <p id="formMessage"></p>
+
     </section>
 
-</main>
+    <!-- Footer -->
+    <footer>
 
-<footer>
-    <p>&copy; 2026 Narukuti Anusha | Personal Portfolio Website</p>
-</footer>
+        <p>
+            © 2026 Narukuti Anusha | Interactive Portfolio Website
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
